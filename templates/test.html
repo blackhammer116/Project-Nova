@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>test</title>
+	</head>
+
+	<body>
+		<form action='/AI' method="POST">
+			<input type='text' placeholder='your question' name="HumanMsg"/ >
+			<input type='submit' />
+			<br>
+			<p className="main-textarea"name="AImsg">{{ AImsg }}</p>
+		</form>
+		<form action="/signup" method="POST">
+
+			<input type='text' placeholder='fname' id="f_name" name="f_name"/><br>
+			<input type='text' placeholder='lname' id="l_name" name="l_name"/>
+			<input type='text' placeholder='mname' id="m_name" name="m_name"/>
+			<input type='date' placeholder='dob' id="dob" name="dob"/>
+			<input type='text' placeholder='email' id="email" name="email"/>
+			<input type='text' placeholder='username' id="username" name="username"/>
+			<input type='password' placeholder='password' id="password"  name="password"/>
+			<input type='text' placeholder='p_number' id="p_number" name="p_number"/>
+			<button type='submit'>submit</button>
+		</form>
+		<form action='/client_signin' method="POST">
+			<input type='text' placeholder='username' name="username" />
+			<input type='password' placeholder='password' name='password' />
+			<input type='submit' />
+			<br>
+			<p className="main-textarea"name="AImsg">{{ status }}</p>
+		</form>
+		<br>
+		<form action='/request' method="POST">
+			<input type='text' placeholder='IP' name="IP" />
+			<input type='password' placeholder='Domain' name='domain' />
+			<input type='text' placeholder='Service ID' name='S_id'/>
+			<input type='submit' />
+			<br>
+		</form><br>
+		<form action='/view_pending' method="POST">
+			<input type='submit' placeholder='View pending client' />
+			<p className="main-textarea"name="AImsg">{{ pendingList }}</p>
+		</form><br>
+		<form action='/admin_login' method="POST">
+			<input type='text' placeholder='Admin username' name="username" />
+			<input type='password' placeholder='Admin password' name='password' />
+			<input type='submit' />
+			<br>
+			<p className="main-textarea"name="AImsg">{{ status2 }}</p>
+		</form>
+		<form action='/admin_view_pending' method="POST">
+			<button type='submit'> View Pending </button>
+			<br>
+			<p className="main-textarea"name="AImsg">{{ adminView }}</p>
+		</form><br><br>
+
+		<form action='/assign_task' method="POST">
+			<input type='text' placeholder='P_ID' name="P_id" />
+			TO:<input type='text' placeholder='E_ID' name='E_id' />
+			<input type='submit' />
+		</form>
+		<form action='/view_task' method="POST">
+			<input type='text' placeholder='Employee username' name="username" />
+			<input type='password' placeholder='password' name='password' />
+			<input type='submit' /><br><br>
+			<p>{{ view_task  }}</p>
+		</form>
+		<form action='/set_result' method="POST">
+			<input type='text' placeholder='Enter P_id' name="P_id" />
+			<input type='text' placeholder='Enter your data' name="r_data" />
+			<input type='text' placeholder='Enter U_id' name='U_id' />
+			<input type='submit' /><br><br>
+			<p>{{ status4  }}</p>
+		</form>
+		<form action='/view_result' method="POST">	
+			<input type='text' placeholder='Client username' name="username" />
+			<input type='password' placeholder='password' name='password' />
+			<input type='submit' /><br><br>
+			<p>{{ view_result }}</p>
+		</form>
+
+		<form action='/logout' method="POST">
+			<button type="submit"> logout </button>
+		</form>
+	</body>
+</html>
